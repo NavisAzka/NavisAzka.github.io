@@ -26,13 +26,20 @@
   font-family: "Courier New", monospace;
 }
 
+.row {
+  min-height: 100px;
+}
+
 .content {
   width: 80%;
   margin: auto;
 }
 
+.texts {
+  margin-top: 13%;
+}
+
 .texts h1 {
-  margin-top: 40px;
   font-size: 50px;
   font-weight: 300;
   color: rgb(176, 176, 176);
@@ -48,13 +55,33 @@ span {
 }
 
 .texts p {
-  font-size: 13px;
+  font-size: 16px;
   color: rgb(176, 176, 176);
   font-family: "Courier New", monospace;
   text-align: center;
 }
 
-.profile-picture img {
+.profile-pivture {
+  position: relative;
+}
+
+.picture {
   border-radius: 100%;
   filter: grayscale(1) drop-shadow(0px 10px 14px rgb(17, 17, 17));
+}
+
+.picture:hover {
+  filter: grayscale(0.4) drop-shadow(0px 10px 14px brown);
+}
+
+.bot-left {
+  position: fixed;
+  left: 3%;
+  bottom: 5%;
+  width: 30px;
+}
+
+.bot-left img {
+  margin-top: 25px;
+  filter: grayscale(0.1);
 }

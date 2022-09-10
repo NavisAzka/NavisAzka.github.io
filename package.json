@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/NavisAzka/NavisAzka.github.io#readme",
   "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.1.7"
   }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,32 +8,47 @@
   </head>
   <body>
     <!-- Header Start -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
       <div class="container">
-        <div class="flex items-center justify-between relative">
+        <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="#home" class="font-bold text-lg text-primary block py-6">navisazka</a>
+            <a href="#home" class="block py-6 text-lg font-bold text-primary">NavisAzka</a>
           </div>
           <div class="flex items-center px-4">
-            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
-              <span class="hamburger-line transition duration-300 origin-top-left"></span>
-              <span class="hamburger-line transition duration-300 origin-center"></span>
-              <span class="hamburger-line transition duration-300 origin-bottom-left"></span>
+            <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300"></span>
+              <span class="hamburger-line origin-center transition duration-300"></span>
+              <span class="hamburger-line origin-bottom-left transition duration-300"></span>
             </button>
 
-            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+            <nav
+              id="nav-menu"
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-700 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
+            >
               <ul class="block lg:flex">
                 <li class="group">
-                  <a href="#home" class="text-base text-dark py-2 mx-8 lg:mx-4 flex group-hover:text-primary">Home</a>
+                  <a href="#home" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-slate-300 lg:mx-4">Home</a>
                 </li>
                 <li class="group">
-                  <a href="#about" class="text-base text-dark py-2 mx-8 lg:mx-4 flex group-hover:text-primary">About Me</a>
+                  <a href="#about" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-slate-300 lg:mx-4">About Me</a>
                 </li>
                 <li class="group">
-                  <a href="#portfolio" class="text-base text-dark py-2 lg:mx-4 mx-8 flex group-hover:text-primary">Portfolio</a>
+                  <a href="#portfolio" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-slate-300 lg:mx-4">Portfolio</a>
                 </li>
                 <li class="group">
-                  <a href="#contact" class="text-base text-dark py-2 lg:mx-4 mx-8 flex group-hover:text-primary">Contact</a>
+                  <a href="#contact" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-slate-300 lg:mx-4">Contact</a>
+                </li>
+                <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-400">L</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-100 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-400">D</span>
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -44,49 +59,44 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-6 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">
               Hello Everyone! , I'm
-              <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl"> Navis Azka </span>
+              <span class="mt-1 block text-4xl font-bold text-dark dark:text-slate-300 lg:text-5xl"> Navis Azka </span>
             </h1>
-            <h2 class="font-medium text-slate-600 mb-5 lg:text-xl">Student High School</h2>
-            <p class="font-medium text-slate-400 mb-10 leading-relaxed">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, <span class="text-dark"> dolore aperiam!</span></p>
+            <h2 class="mt-4 mb-5 font-medium text-slate-600 dark:text-slate-400 lg:text-xl">High School Student</h2>
+            <p class="mb-10 font-medium leading-relaxed text-slate-400">he<span class="text-dark dark:text-slate-300">he!</span></p>
 
-            <a href="#contact" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out">Contact Me</a>
+            <a href="#contact" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-200 ease-in-out hover:opacity-70 hover:shadow-lg">Contact Me</a>
           </div>
           <div class="w-full self-end px-6 lg:w-1/2">
-            <div class="mt-10 relative lg:mt-0 lg:right-0">
-              <img src="dist/img/pp.png" alt="Navis Azka" class="max-w-full mx-auto" />
-              <span class="absolute -bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125">
-                
-                </svg>
-              </span>
+            <div class="relative mt-10 lg:right-0 lg:mt-0">
+              <img src="dist/img/pp.png" alt="Navis Azka" class="mx-auto max-w-md rounded-full" />
+
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Hero Section End -->
 
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
-            <h2 class="font-bold text-dark text-3xl mb-5 max-w-xl">Lorem ipsum dolor sit amet</h2>
-            <p class="font-medium text-base text-slate-500 max-w-xl lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dicta numquam consequuntur eius, magni soluta libero ullam rem molestiae provident laborum.</p>
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <h4 class="mb-3 text-lg font-bold uppercase text-primary">About Me</h4>
+            <h2 class="mb-5 max-w-xl text-3xl font-bold text-dark dark:text-slate-300">Sekilas Tentang Saya</h2>
+            <p class="max-w-xl text-base font-medium text-slate-500 lg:text-xl">Saya adalah manusia biasa, lahir dikeluarga yang biasa, dibesarkan secara biasa saja layaknya manusia biasa pada umumnya.</p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
-            <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Lorem Ipsum</h3>
-            <p class="font-medium text-base text-slate-500 mb-6 lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, laudantium culpa vitae dolorem voluptatem delectus ipsam.</p>
+            <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-slate-300 lg:pt-10 lg:text-3xl">Media Sosial</h3>
+            <p class="mb-6 text-base font-medium text-slate-500 lg:text-xl">Sosmed / Medsos.</p>
             <div class="flex items-center">
               <!-- YouTube -->
-              <a href="https://youtube.com" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center text-slate-500 items-center border border-slate-500 hover:border-primary hover:bg-primary hover:text-white">
+              <a href="https://youtube.com" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-primary hover:bg-primary hover:text-white">
                 <svg role="img" width="20" height="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>YouTube</title>
                   <path
@@ -95,7 +105,7 @@
                 </svg>
               </a>
               <!-- Instagram -->
-              <a href="https://instagram.com" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center text-slate-500 items-center border border-slate-500 hover:border-primary hover:bg-primary hover:text-white">
+              <a href="https://instagram.com" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-primary hover:bg-primary hover:text-white">
                 <svg role="img" width="20" height="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Instagram</title>
                   <path
@@ -104,7 +114,7 @@
                 </svg>
               </a>
               <!-- GitHub -->
-              <a href="https://github.com/navisazka" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center text-slate-500 items-center border border-slate-500 hover:border-primary hover:bg-primary hover:text-white">
+              <a href="https://github.com/navisazka" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-primary hover:bg-primary hover:text-white">
                 <svg role="img" width="20" height="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>GitHub</title>
                   <path
@@ -113,7 +123,7 @@
                 </svg>
               </a>
               <!-- Twitter -->
-              <a href="https://twitter.com" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center text-slate-500 items-center border border-slate-500 hover:border-primary hover:bg-primary hover:text-white">
+              <a href="https://twitter.com" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-primary hover:bg-primary hover:text-white">
                 <svg role="img" width="20" height="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Twitter</title>
                   <path
@@ -129,35 +139,74 @@
     <!-- About Section End -->
 
     <!-- Portfolio Section Start -->
-    <div class="bg-violet-200 pt-36 pb-16">
+    <div class="bg-violet-100 pt-36 pb-16 dark:bg-dark2">
       <scetion id="portfolio" class="">
         <div class="container">
           <div class="w-full px-4">
-            <div class="max-w-xl mx-auto text-center mb-16">
-              <h4 class="font-semibold text-lg text-primary mb-2 uppercase">Portfolio</h4>
-              <h2 class="font-bold text-dark text-3xl mb-4">My Projects</h2>
-              <p class="font-medium text-md text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vel ducimus, odio ex explicabo blanditiis omnis ipsam culpa nobis! Quo deserunt ut dolor nobis.</p>
+            <div class="mx-auto mb-16 max-w-xl text-center">
+              <h4 class="mb-2 text-lg font-semibold uppercase text-primary">P o r t f o l i o</h4>
+              <h2 class="mb-4 text-3xl font-bold text-dark dark:text-slate-300">My Projects</h2>
+              <p class="text-md font-medium text-slate-600 dark:text-slate-400">Ini adalah beberapa project yang pernah saya buat.</p>
             </div>
           </div>
-
-          <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
-            <div class="mb-12 p-6 md:w-4/12 bg-violet-100 rounded-xl mx-3">
-              <a href="https://drive.google.com/file/d/1oBxQRi6dYQfWP0gJbuLvWf-V-yEs1ncF/view?usp=sharing" target="_blank">
-              <div class="rounded-md shadow-md overflow-hidden">
+          <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
+            <!-- card game -->
+            <div class="mx-6 mb-12 rounded-xl p-6 shadow-lg shadow-violet-500 dark:shadow-primary md:w-4/12">
+              <div class="overflow-hidden rounded-md shadow-md">
                 <img src="dist/img/41.jpg" alt="Android Game" />
               </div>
-              </a>
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Online Multiplayer Android Game</h3>
-              <p class="font-medium text-base text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at, omnis rem maiores iste quisquam numquam adipisci odio dolores dicta.</p>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-slate-300">Online Multiplayer Android Game</h3>
+              <p class="text-base font-medium text-slate-600 dark:text-slate-400">Game kartu online sederhana.</p>
+              <div class="mt-12">
+                <a
+                  href="https://drive.google.com/file/d/1oBxQRi6dYQfWP0gJbuLvWf-V-yEs1ncF/view?usp=sharing"
+                  target="_blank"
+                  class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-200 ease-in-out hover:opacity-70 hover:shadow-lg"
+                  >Download Apk</a
+                >
+              </div>
             </div>
-            <div class="mb-12 p-6 md:w-4/12 bg-violet-100 rounded-xl mx-3">
-              <a href="https://drive.google.com/file/d/15M-LnMy_VzKPQ44qPolZrixobrHjojk4/view?usp=sharing" target="_blank">
-              <div class="rounded-md shadow-md overflow-hidden">
+            <!-- collision -->
+            <div class="mx-6 mb-12 rounded-xl p-6 shadow-lg shadow-violet-500 dark:shadow-primary md:w-4/12">
+              <div class="overflow-hidden rounded-md shadow-md">
                 <img src="dist/img/c.jpg" alt="Android Game" />
               </div>
-              </a>
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Android Game</h3>
-              <p class="font-medium text-base text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at, omnis rem maiores iste quisquam numquam adipisci odio dolores dicta.</p>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-slate-300">Android Game</h3>
+              <p class="text-base font-medium text-slate-600 dark:text-slate-400">Game android sederhana.</p>
+              <div class="mt-12">
+                <a
+                  href="https://drive.google.com/file/d/15M-LnMy_VzKPQ44qPolZrixobrHjojk4/view?usp=sharing"
+                  target="_blank"
+                  class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-200 ease-in-out hover:opacity-70 hover:shadow-lg"
+                  >Download Apk</a
+                >
+              </div>
+            </div>
+            <!-- web game -->
+            <div class="mx-6 mb-12 rounded-xl p-6 shadow-lg shadow-violet-500 dark:shadow-primary md:w-4/12">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img src="dist/img/mgame.png" alt="Android Game" />
+              </div>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-slate-300">Simple Quiz</h3>
+              <p class="text-base font-medium text-slate-600 dark:text-slate-400">Quiz sederhana.</p>
+              <div class="mt-12">
+                <a href="https://navisazka.github.io/m-web-game/" target="_blank" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-200 ease-in-out hover:opacity-70 hover:shadow-lg"
+                  >Visit Quiz</a
+                >
+              </div>
+            </div>
+            <!-- clock -->
+            <div class="mx-6 mb-12 rounded-xl p-6 shadow-lg shadow-violet-500 dark:shadow-primary md:w-4/12">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img src="dist/img/clock.png" alt="Android Game" />
+              </div>
+              <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-slate-300">Clock</h3>
+              <p class="text-base font-medium text-slate-600 dark:text-slate-400">Jam sederhana.</p>
+              <div class="mt-12">
+                <a href="https://navisazka.github.io/web-clock/" target="_blank" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-200 ease-in-out hover:opacity-70 hover:shadow-lg"
+                  >Visit Clock</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -166,32 +215,38 @@
     <!-- Portfolio Section End -->
 
     <!-- Contact Section start-->
-    <section id="contact" class="pt-36 pb-32">
+    <section id="contact" class="pt-36 pb-32 dark:bg-dark">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2 uppercase">Contact</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4">Don't Be a Stranger, Contact Me!</h2>
-            <p class="font-medium text-md text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="mb-2 text-lg font-semibold uppercase text-primary">C o n t a c t</h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-slate-300">Don't Be a Stranger, Contact Me!</h2>
+            <p class="text-md font-medium text-slate-600 dark:text-slate-400">Send me a message.</p>
           </div>
         </div>
 
-        <form>
-          <div class="w-full lg:w-1/2 lg:mx-auto">
-            <div class="w-full px-4 mb-8">
+        <form name="submit-to-google-sheet">
+          <div class="w-full lg:mx-auto lg:w-1/2">
+            <div class="mb-8 w-full px-4">
               <label for="name" class="text-base font-bold text-primary">Name</label>
-              <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md mt-2 focus:outline-none focus:ring-primary focus:ring-2 focus:border-primary" />
+              <input type="text" id="name" name="nama" required class="mt-2 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-slate-600 dark:text-slate-300" />
             </div>
-            <div class="w-full px-4 mb-8">
+            <div class="mb-8 w-full px-4">
               <label for="email" class="text-base font-bold text-primary">Email</label>
-              <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md mt-2 focus:outline-none focus:ring-primary focus:ring-2 focus:border-primary" />
+              <input type="email" id="email" name="email" required class="mt-2 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-slate-600 dark:text-slate-300" />
             </div>
-            <div class="w-full px-4 mb-8">
+            <div class="mb-8 w-full px-4">
               <label for="massage" class="text-base font-bold text-primary">Massage</label>
-              <textarea type="text" id="massage" class="w-full h-32 bg-slate-200 text-dark p-3 rounded-md mt-2 focus:outline-none focus:ring-primary focus:ring-2 focus:border-primary"></textarea>
+              <textarea
+                type="text"
+                id="massage"
+                name="pesan"
+                required
+                class="mt-2 h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-slate-600 dark:text-slate-300"
+              ></textarea>
             </div>
             <div class="w-full px-4">
-              <button class="text-base font-semibold text-white bg-primary py-3 w-full rounded-full hover:shadow-lg hover:opacity-70 transition duration-200 ease-in-out">Send</button>
+              <button type="submit" class="w-full rounded-full bg-primary py-3 text-base font-semibold text-white transition duration-200 ease-in-out hover:opacity-70 hover:shadow-lg">Send</button>
             </div>
           </div>
         </form>
@@ -200,14 +255,14 @@
     <!-- Contact Section end-->
 
     <!-- Footer Start -->
-    <footer class="bg-dark pt-12 pb-6">
+    <footer class="bg-dark pt-12 pb-6 dark:bg-black">
       <div class="container">
         <div class="flex flex-wrap"></div>
 
         <div class="w-full pt-0">
-          <div class="flex items-center justify-center mb-5">
+          <div class="mb-5 flex items-center justify-center">
             <!-- YouTube -->
-            <a href="https://youtube.com" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center text-slate-500 items-center border border-slate-500 hover:border-primary hover:bg-primary hover:text-white">
+            <a href="https://youtube.com" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-primary hover:bg-primary hover:text-white">
               <svg role="img" width="20" height="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>YouTube</title>
                 <path
@@ -216,7 +271,7 @@
               </svg>
             </a>
             <!-- Instagram -->
-            <a href="https://instagram.com" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center text-slate-500 items-center border border-slate-500 hover:border-primary hover:bg-primary hover:text-white">
+            <a href="https://instagram.com" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-primary hover:bg-primary hover:text-white">
               <svg role="img" width="20" height="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Instagram</title>
                 <path
@@ -225,7 +280,7 @@
               </svg>
             </a>
             <!-- GitHub -->
-            <a href="https://github.com/navisazka" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center text-slate-500 items-center border border-slate-500 hover:border-primary hover:bg-primary hover:text-white">
+            <a href="https://github.com/navisazka" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-primary hover:bg-primary hover:text-white">
               <svg role="img" width="20" height="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>GitHub</title>
                 <path
@@ -234,7 +289,7 @@
               </svg>
             </a>
             <!-- Twitter -->
-            <a href="https://twitter.com" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center text-slate-500 items-center border border-slate-500 hover:border-primary hover:bg-primary hover:text-white">
+            <a href="https://twitter.com" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-500 hover:border-primary hover:bg-primary hover:text-white">
               <svg role="img" width="20" height="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Twitter</title>
                 <path
@@ -244,12 +299,30 @@
             </a>
           </div>
 
-          <p class="font-medium text-sm text-slate-500 text-center">Created By Muhammad Navis Azka</p>
+          <p class="text-center text-sm font-medium text-slate-500">Created By Muhammad Navis Azka</p>
         </div>
       </div>
     </footer>
     <!-- Footer End -->
 
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzxuDc1ob0N6qBn06IS7plhBwhZbg-1kV_lszg3WEl_BNTNqmqbWrfJ3ySjBWkozUzzOA/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            console.log("Success!", response);
+            alert("message sent successfully!");
+            form.reset();
+          })
+          .catch((error) => {
+            console.error("Error!", error.message);
+            alert("message failed to send!");
+          });
+      });
+    </script>
     <script src="dist/js/script.js"></script>
   </body>
 </html>

@@ -18,3 +18,22 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("hamburger-active");
   navmenu.classList.toggle("hidden");
 });
+
+window.addEventListener("click", (e) => {
+  if (e.target != hamburger && e.target != navmenu) {
+    hamburger.classList.remove("hamburger-active");
+    navmenu.classList.add("hidden");
+  }
+});
+
+//DArk Toggle
+const darkToggle = document.querySelector("#dark-toggle");
+const html = document.querySelector("html");
+
+darkToggle.addEventListener("click", () => {
+  if (darkToggle.checked) {
+    html.classList.add("dark");
+  } else {
+    html.classList.remove("dark");
+  }
+});
